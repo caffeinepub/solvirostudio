@@ -1,11 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Replace the site-wide SolviroStudio text branding with the user-uploaded logo, including an updated favicon.
+**Goal:** Replace the app’s logo with the user-provided logo everywhere it appears and restore the previous (older) theme styling.
 
 **Planned changes:**
-- Add the uploaded logo file to frontend static assets and generate optimized web variants (header/nav logo and square favicon/icon) that remain crisp on light and dark backgrounds.
-- Update header/navigation and footer components to render the new logo image (with accessible alt text) instead of the text “SolviroStudio”, maintaining existing spacing/alignment and stable scroll behavior.
-- Update HTML head metadata to reference the new favicon derived from the uploaded logo.
+- Swap all occurrences of the current SolviroStudio logo/favicon assets in the UI to use the user-provided logo (served as static assets under `frontend/public/assets/generated`).
+- Restore the prior theme (colors/typography/component styling) while keeping `.brand-gradient-bg` and `.brand-gradient-text` utility classes available and working.
+- Ensure no backend changes are introduced for logo/theme updates and keep existing routing/asset serving as static-only.
 
-**User-visible outcome:** The site header and footer show the new SolviroStudio logo image (instead of text), and the browser tab favicon updates to match the new logo.
+**User-visible outcome:** The site shows the user-provided logo consistently (including header and favicon) and the overall look/feel matches the previous theme again.

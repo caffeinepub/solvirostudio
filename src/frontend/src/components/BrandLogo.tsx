@@ -6,11 +6,11 @@ interface BrandLogoProps {
 export default function BrandLogo({ className = '', height = 32 }: BrandLogoProps) {
   return (
     <img
-      src="/assets/generated/solvirostudio-logo-header.dim_800x240.png"
+      src="/assets/generated/solvirostudio-logo-header-v2.dim_800x240.png"
       alt="SolviroStudio logo"
       height={height}
       width={height * 2.5}
-      className={`object-contain ${className}`}
+      className={`logo-crisp object-contain ${className}`}
       style={{ height: `${height}px`, width: 'auto' }}
     />
   );

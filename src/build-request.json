@@ -1,80 +1,31 @@
 {
   "kind": "build_request",
-  "title": "Replace SolviroStudio logo site-wide with uploaded logo",
+  "title": "Apply user-provided logo everywhere and restore the previous theme",
   "priority": "normal",
-  "requirements": [
-    {
-      "id": "REQ-13",
-      "text": "Add the user-uploaded logo image (\"ChatGPT Image Feb 10, 2026, 06_11_32 AM.png\") to the app’s static assets and create optimized logo variants for web use (navigation/header and favicon), keeping the logo visually crisp on light and dark backgrounds.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-user-website-version-1",
-          "msg-user-replace-logo",
-          "msg-user-upload-1"
-        ],
-        "quotes": [
-          "replace my logo"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The repository contains the original uploaded logo file stored under frontend/public/assets/generated (or a clearly documented assets folder under frontend/public) without routing through the backend.",
-        "At least two optimized variants exist in frontend/public/assets/generated: one for header/nav display and one square icon suitable for favicon/app icon usage.",
-        "The optimized logo variants have transparent background (where applicable) and look sharp when rendered at typical navbar sizes (e.g., ~28–40px tall) and at favicon sizes."
-      ]
-    },
-    {
-      "id": "REQ-14",
-      "text": "Replace all current text-only “SolviroStudio” branding in the site header/navigation and footer with the new logo image, while keeping accessible text via alt attributes and maintaining consistent spacing/alignment with the existing layout.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-user-replace-logo"
-        ],
-        "quotes": [
-          "replace my logo"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Top navigation (frontend/src/components/TopNav.tsx) displays the new logo image instead of the text “SolviroStudio”.",
-        "Footer (frontend/src/components/Footer.tsx) displays the new logo image instead of the text “SolviroStudio”.",
-        "All logo images include meaningful alt text (e.g., “SolviroStudio logo”) and do not cause layout shifts when scrolling (TopNav scroll state remains stable).",
-        "The logo scales responsively and remains legible on both transparent (top-of-page) and scrolled (bg-background/95) nav states."
-      ]
-    },
-    {
-      "id": "REQ-15",
-      "text": "Update the HTML document head metadata to use the new favicon derived from the uploaded logo.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-user-replace-logo"
-        ],
-        "quotes": [
-          "replace my logo"
-        ]
-      },
-      "acceptanceCriteria": [
-        "frontend/index.html references a favicon file derived from the uploaded logo (e.g., /assets/generated/solvirostudio-favicon...).",
-        "The favicon loads correctly in the browser tab when running the app."
-      ]
-    }
-  ],
+  "requirements": [],
   "constraints": [
-    "Frontend immutable paths must not be edited: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui.",
-    "Do not route images through the backend; serve logo assets as static files from the frontend (consistent with existing static asset handling).",
-    "Backend architecture must remain single-actor; no backend changes are required for this request."
+    "Frontend immutable paths must not be edited: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui",
+    "Keep the existing SolviroStudio brand gradient utility classes available and working: .brand-gradient-bg and .brand-gradient-text",
+    "Do not route or serve images through the backend; use static assets under frontend/public/assets/generated",
+    "Backend must remain single-actor (all Motoko logic in backend/main.mo); only add backend migration if strictly required by state changes"
   ],
   "nonGoals": [
-    "Changing brand colors (#FFD233, #FFA500, #FF6A00) or the global visual system.",
-    "Redesigning the site layout beyond necessary adjustments to fit the new logo in the header/footer.",
-    "Adding new pages, sections, or backend features."
+    "Introduce new sections, navigation items, or copy changes beyond ensuring the logo replacement and old theme restoration are applied",
+    "Add new authentication methods beyond Internet Identity",
+    "Add new backend features unrelated to logo/theme"
   ],
   "imageRequirements": {
-    "required": [
-      "Transparent-background header logo derived from the uploaded logo (solvirostudio-logo-header.dim_800x240.png)",
-      "Square icon derived from the uploaded logo for favicon/app icon usage (solvirostudio-favicon.dim_256x256.png)"
-    ],
+    "required": [],
     "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
   }
 }

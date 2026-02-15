@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 5,
+  "projectStateVersion": 11,
   "summary": "Build an extra-long, modern, visually engaging portfolio website for SolviroStudio focused on Meta Ads and Creative Design for solar companies, with specified navigation, branded gradient color scheme, multiple proof/results sections, portfolio showcases, testimonials, and a contact form to drive leads and trust.",
   "architectural_notes": [
     "Site should be modern/clean/professional, results-focused for solar companies, with prominent CTAs on every major section.",
@@ -8,11 +8,11 @@
     "Portfolio section should support 5–7 project entries each with an image, campaign goal, and measurable results (leads/engagement/ROI).",
     "Client Results section should support multiple screenshots/graphics/charts placeholders for proof and metrics.",
     "Contact section includes email (solvirostudio@gmail.com), phone placeholder, and simple contact form.",
-    "Logo should be configurable/swappable via a static asset (e.g., in frontend/public assets) and updated consistently anywhere it appears (header/nav, footer, favicon if used)."
+    "Logo should be configurable/swappable via a static asset (e.g., in frontend/public assets) and updated consistently anywhere it appears (header/nav, footer, favicon if used).",
+    "Revert site styling back to the previous/old theme (do not proceed with the newer gradient/theme alignment changes)."
   ],
   "known_issues": [],
-  "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Transparent-background header logo derived from the uploaded logo (solvirostudio-logo-header.dim_800x240.png)\n- Square icon derived from the uploaded logo for favicon/app icon usage (solvirostudio-favicon.dim_256x256.png)",
+  "isFixRequest": true,
   "existing_features": [
     {
       "id": "feature-build-a-single-page-extra-long-scrolling-portfolio-website-for-solvirostudio-with-a-top-navigation-menu-linking-to-in-page-sections-home-portfolio-about-us-services-client-results-testimonials-contact-us",
@@ -123,6 +123,38 @@
       "title": "Update the HTML document head metadata to use the new favicon derived from the uploaded logo.",
       "reqIds": [
         "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-new-optimized-solvirostudio-logo-assets-from-the-newly-uploaded-image-chatgpt-image-feb-10-2026-06-11-32-am-2-png-1-a-transparent-background-header-logo-and-2-a-square-favicon-app-icon",
+      "title": "Generate new optimized SolviroStudio logo assets from the newly uploaded image \"ChatGPT Image Feb 10, 2026, 06_11_32 AM-2.png\": (1) a transparent-background header logo and (2) a square favicon/app icon.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-site-to-use-the-newly-generated-logo-assets-everywhere-the-logo-appears-top-navigation-footer-and-browser-favicon-replacing-the-current-generated-logo-asset-references",
+      "title": "Update the site to use the newly generated logo assets everywhere the logo appears (top navigation, footer, and browser favicon), replacing the current generated logo asset references.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-revert-the-site-s-visual-theme-to-the-previous-older-theme-by-restoring-the-prior-global-design-tokens-and-base-styling-in-the-active-global-stylesheet-currently-imported-from-frontend-src-main-tsx-as-index-css-ensure-the-restored-theme-brings-back-the-previous-background-foreground-surface-contrast-and-typography-feel-while-keeping-the-existing-solvirostudio-brand-gradient-utilities-brand-gradient-bg-brand-gradient-text-available-so-existing-cta-button-styling-continues-to-render-correctly",
+      "title": "Revert the site’s visual theme to the previous (older) theme by restoring the prior global design tokens and base styling in the active global stylesheet (currently imported from `frontend/src/main.tsx` as `./index.css`). Ensure the restored theme brings back the previous background/foreground/surface contrast and typography feel, while keeping the existing SolviroStudio brand gradient utilities (`.brand-gradient-bg`, `.brand-gradient-text`) available so existing CTA/button styling continues to render correctly.",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-current-solvirostudio-logo-used-throughout-the-site-with-the-user-provided-logo-once-it-is-supplied-add-the-provided-logo-to-static-assets-generate-an-optimized-transparent-header-logo-and-a-square-favicon-app-icon-from-it-and-update-all-logo-references-to-use-the-newly-generated-assets-including-frontend-src-components-brandlogo-tsx-and-frontend-index-html",
+      "title": "Replace the current SolviroStudio logo used throughout the site with the user-provided logo once it is supplied: add the provided logo to static assets, generate an optimized transparent header logo and a square favicon/app icon from it, and update all logo references to use the newly generated assets (including `frontend/src/components/BrandLogo.tsx` and `frontend/index.html`).",
+      "reqIds": [
+        "REQ-19"
       ],
       "version": 1
     }
