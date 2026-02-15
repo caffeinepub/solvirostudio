@@ -1,0 +1,125 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build an extra-long, modern, visually engaging portfolio website for SolviroStudio focused on Meta Ads and Creative Design for solar companies, with specified navigation, branded gradient color scheme, multiple proof/results sections, portfolio showcases, testimonials, and a contact form to drive leads and trust.",
+  "architectural_notes": [
+    "Site should be modern/clean/professional, results-focused for solar companies, with prominent CTAs on every major section.",
+    "Use brand accent/CTA gradients and highlights with #FFD233, #FFA500, #FF6A00 including hero background gradient (#FFD233→#FFA500→#FF6A00).",
+    "Portfolio section should support 5–7 project entries each with an image, campaign goal, and measurable results (leads/engagement/ROI).",
+    "Client Results section should support multiple screenshots/graphics/charts placeholders for proof and metrics.",
+    "Contact section includes email (solvirostudio@gmail.com), phone placeholder, and simple contact form."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Team illustration of a professional creative/ads studio vibe with subtle solar/renewable energy motifs (team-illustration.dim_1200x800.png)\n- Set of 7 ad design mock images with clean modern layouts and solar-industry themes (portfolio-ad-1.dim_1200x900.png)\n- Set of 7 ad design mock images with clean modern layouts and solar-industry themes (portfolio-ad-2.dim_1200x900.png)\n- Set of 7 ad design mock images with clean modern layouts and solar-industry themes (portfolio-ad-3.dim_1200x900.png)\n- Set of 7 ad design mock images with clean modern layouts and solar-industry themes (portfolio-ad-4.dim_1200x900.png)\n- Set of 7 ad design mock images with clean modern layouts and solar-industry themes (portfolio-ad-5.dim_1200x900.png)\n- Set of 7 ad design mock images with clean modern layouts and solar-industry themes (portfolio-ad-6.dim_1200x900.png)\n- Set of 7 ad design mock images with clean modern layouts and solar-industry themes (portfolio-ad-7.dim_1200x900.png)\n- Set of 4 clean campaign results graphics/charts with solar marketing metrics styling (results-graphic-1.dim_1400x900.png)\n- Set of 4 clean campaign results graphics/charts with solar marketing metrics styling (results-graphic-2.dim_1400x900.png)\n- Set of 4 clean campaign results graphics/charts with solar marketing metrics styling (results-graphic-3.dim_1400x900.png)\n- Set of 4 clean campaign results graphics/charts with solar marketing metrics styling (results-graphic-4.dim_1400x900.png)",
+  "existing_features": [
+    {
+      "id": "feature-build-a-single-page-extra-long-scrolling-portfolio-website-for-solvirostudio-with-a-top-navigation-menu-linking-to-in-page-sections-home-portfolio-about-us-services-client-results-testimonials-contact-us",
+      "title": "Build a single-page, extra-long scrolling portfolio website for “SolviroStudio” with a top navigation menu linking to in-page sections: Home, Portfolio, About Us, Services, Client Results, Testimonials, Contact Us.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-site-wide-visual-system-using-the-brand-colors-ffd233-ffa500-ff6a00-for-buttons-accents-and-highlights-including-a-consistent-gradient-treatment-ffd233-ffa500-ff6a00-and-a-modern-clean-professional-layout-suitable-for-a-results-focused-solar-marketing-agency",
+      "title": "Implement the site-wide visual system using the brand colors #FFD233, #FFA500, #FF6A00 for buttons, accents, and highlights, including a consistent gradient treatment (#FFD233 → #FFA500 → #FF6A00) and a modern, clean, professional layout suitable for a results-focused solar marketing agency.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-home-hero-section-with-the-exact-headline-subheadline-cta-button-text-and-a-professional-gradient-background-using-ffd233-ffa500-ff6a00",
+      "title": "Create the Home (Hero) section with the exact headline, subheadline, CTA button text, and a professional gradient background using #FFD233 → #FFA500 → #FF6A00.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-about-solvirostudio-section-with-the-provided-text-include-an-optional-visual-image-illustration-and-include-a-cta-button-labeled-learn-more",
+      "title": "Create the About SolviroStudio section with the provided text, include an optional visual (image/illustration), and include a CTA button labeled “Learn More”.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-services-section-listing-exactly-three-services-with-1-2-sentence-descriptions-each-1-meta-ads-management-for-solar-companies-2-creative-design-visual-campaigns-3-roi-focused-lead-generation-include-a-cta-button-labeled-explore-services",
+      "title": "Create the Services section listing exactly three services with 1–2 sentence descriptions each: (1) Meta Ads Management for Solar Companies, (2) Creative Design & Visual Campaigns, (3) ROI-Focused Lead Generation; include a CTA button labeled “Explore Services”.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-portfolio-section-showcasing-5-7-projects-with-visuals-each-project-block-must-include-an-ad-design-image-a-campaign-goal-e-g-generate-solar-leads-and-results-achieved-leads-engagement-roi-metrics-include-a-cta-button-labeled-view-full-portfolio",
+      "title": "Create the Portfolio section showcasing 5–7 projects with visuals; each project block must include an Ad Design Image, a Campaign Goal (e.g., generate solar leads), and Results achieved (leads, engagement, ROI metrics); include a CTA button labeled “View Full Portfolio”.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-client-results-section-designed-to-hold-multiple-screenshots-graphics-of-real-campaign-results-including-the-provided-intro-text-and-a-cta-button-labeled-get-your-results",
+      "title": "Create a Client Results section designed to hold multiple screenshots/graphics of real campaign results, including the provided intro text and a CTA button labeled “Get Your Results”.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-testimonials-section-with-3-5-client-quotes-praising-meta-ads-and-creative-design-services-for-solar-businesses-including-the-provided-supporting-text",
+      "title": "Create the Testimonials section with 3–5 client quotes praising Meta Ads and Creative Design services for solar businesses, including the provided supporting text.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-contact-us-section-with-the-provided-text-display-the-email-solvirostudio-gmail-com-display-a-phone-placeholder-and-provide-a-simple-contact-form-with-a-cta-button-labeled-contact-me",
+      "title": "Create the Contact Us section with the provided text, display the email “solvirostudio@gmail.com”, display a phone placeholder, and provide a simple contact form with a CTA button labeled “Contact Me”.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-every-major-section-hero-about-services-portfolio-client-results-testimonials-contact-contains-a-prominent-call-to-action-button-as-specified-and-those-ctas-provide-sensible-navigation-e-g-scroll-to-contact-services-portfolio-consistent-with-a-lead-generation-flow",
+      "title": "Ensure every major section (Hero, About, Services, Portfolio, Client Results, Testimonials, Contact) contains a prominent call-to-action button as specified, and those CTAs provide sensible navigation (e.g., scroll to Contact/Services/Portfolio) consistent with a lead-generation flow.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-static-asset-support-for-the-requested-visuals-team-illustration-portfolio-ad-designs-client-results-graphics-charts-and-render-them-in-the-appropriate-sections-from-frontend-public-assets-generated-no-backend-image-routing",
+      "title": "Add static asset support for the requested visuals (team illustration, portfolio ad designs, client results graphics/charts) and render them in the appropriate sections from frontend/public/assets/generated (no backend image routing).",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create SolviroStudio extra-long scrolling portfolio website (Home, Portfolio, About, Services, Client Results, Testimonials, Contact) with branded gradient (#FFD233→#FFA500→#FF6A00), CTAs in each section, portfolio project blocks, results/proof visuals areas, testimonials, and contact form.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Implement backend support to store contact form submissions in the Motoko canister (single-actor), including a query method to list submissions for administrative review (no public UI required unless minimal view is necessary).",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "SolviroStudio",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

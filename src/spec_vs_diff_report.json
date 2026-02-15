@@ -1,0 +1,84 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-15T05:47:32.240Z",
+  "summary": "Diff adds a single-page scrolling React frontend with the required sections, brand gradient styling, portfolio/results assets referenced from /assets/generated, and a Motoko backend for contact form submission storage and admin-only retrieval. Main gaps are around the Testimonials section lacking a CTA, and several unrequested authentication/authorization and footer attribution features were introduced.",
+  "missing_requirements": [
+    {
+      "id": "REQ-11",
+      "requirement": "Ensure every major section (Hero, About, Services, Portfolio, Client Results, Testimonials, Contact) contains a prominent call-to-action button as specified, with sensible navigation.",
+      "reason": "TestimonialsSection renders quotes and supporting text but includes no CTA button, so not every major section has a CTA.",
+      "evidence": [
+        "frontend/src/components/sections/TestimonialsSection.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Internet Identity authentication layer and actor creation logic tied to identity (including admin token handling).",
+      "reason": "BuildRequest does not request login/auth, identity providers, or admin-token URL/session parsing for end users; only requires contact form storage without third-party services.",
+      "evidence": [
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts",
+        "frontend/src/utils/urlParams.ts",
+        "frontend/src/main.tsx"
+      ]
+    },
+    {
+      "description": "Backend access-control/authorization mixin and admin-only gating for listing submissions via a secret initialization flow.",
+      "reason": "REQ-10 requires a query method to list submissions but does not require an authorization framework, secret token initialization, or role/permission system.",
+      "evidence": [
+        "backend/main.mo",
+        "frontend/src/hooks/useActor.ts"
+      ]
+    },
+    {
+      "description": "Backend user profile APIs (get/save user profiles).",
+      "reason": "No user profile functionality is requested in any requirement or acceptance criteria.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "description": "Additional backend method getContactInfo returning email/phone.",
+      "reason": "REQ-9 requires the frontend display email/phone placeholder; it does not require a dedicated backend endpoint for public contact info.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "description": "Footer caffeine.ai attribution link with UTM parameters and a red heart icon styling.",
+      "reason": "BuildRequest does not request any footer attribution, external links, or the use of non-brand colors for UI elements.",
+      "evidence": [
+        "frontend/src/components/Footer.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.74,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/GradientButton.tsx",
+    "frontend/src/components/TopNav.tsx",
+    "frontend/src/components/sections/AboutSection.tsx",
+    "frontend/src/components/sections/ClientResultsSection.tsx",
+    "frontend/src/components/sections/ContactSection.tsx",
+    "frontend/src/components/sections/HeroSection.tsx",
+    "frontend/src/components/sections/PortfolioSection.tsx",
+    "frontend/src/components/sections/ServicesSection.tsx",
+    "frontend/src/components/sections/TestimonialsSection.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useSubmitContactForm.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/utils/urlParams.ts",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

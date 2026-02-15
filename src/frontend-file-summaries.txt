@@ -1,0 +1,16 @@
+{
+  "frontend/src/App.tsx": "Main application component that orchestrates the single-page scrolling layout with all sections (Hero, About, Services, Portfolio, Client Results, Testimonials, Contact) and manages smooth scroll navigation between sections.",
+  "frontend/src/components/TopNav.tsx": "Fixed top navigation component with scroll-aware styling that provides smooth navigation to all page sections (Home, Portfolio, About Us, Services, Client Results, Testimonials, Contact Us).",
+  "frontend/src/components/GradientButton.tsx": "Reusable CTA button component that properly extends Button component props and applies the SolviroStudio brand gradient (#FFD233 → #FFA500 → #FF6A00) consistently across all sections.",
+  "frontend/src/components/sections/HeroSection.tsx": "Hero section with exact headline/subheadline text, brand gradient background, and \"Get Started Now\" CTA that scrolls to contact section.",
+  "frontend/src/components/sections/AboutSection.tsx": "About section featuring the team illustration, company description, three value proposition cards with icons, and \"Learn More\" CTA.",
+  "frontend/src/components/sections/ServicesSection.tsx": "Services section displaying three service offerings (Meta Ads Management, Creative Design, ROI-Focused Lead Generation) with descriptions and \"Explore Services\" CTA.",
+  "frontend/src/components/sections/PortfolioSection.tsx": "Portfolio showcase with 7 project cards, each displaying ad design images, campaign goals, and measurable results (leads, engagement, ROI) with \"View Full Portfolio\" CTA.",
+  "frontend/src/components/sections/ClientResultsSection.tsx": "Client results section displaying 4 result graphics/charts in a responsive grid with intro text and \"Get Your Results\" CTA.",
+  "frontend/src/components/sections/TestimonialsSection.tsx": "Testimonials section featuring 5 client quotes with author details, company names, and roles, emphasizing Meta Ads and creative design success stories.",
+  "frontend/src/components/sections/ContactSection.tsx": "Contact section with email/phone display, contact form (name, email, company, message), form submission handling via backend, and success/error state display.",
+  "frontend/src/components/Footer.tsx": "Footer component with quick links, contact information, and required caffeine.ai attribution with UTM tracking.",
+  "frontend/src/hooks/useSubmitContactForm.ts": "React hook that manages contact form submission to the backend actor, handling loading, success, and error states.",
+  "frontend/src/index.css": "Global styles with OKLCH color system, SolviroStudio brand color variables (#FFD233, #FFA500, #FF6A00), and utility classes for brand gradient backgrounds and text.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with SolviroStudio brand colors as named tokens for consistent usage throughout the application."
+}
