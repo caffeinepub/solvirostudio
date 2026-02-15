@@ -2,12 +2,30 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-build-a-single-page-extra-long-scrolling-portfolio-website-for-solvirostudio-with-a-top-navigation-menu-linking-to-in-page-sections-home-portfolio-about-us-services-client-results-testimonials-contact-us",
-      "featureTitle": "Build a single-page, extra-long scrolling portfolio website for “SolviroStudio” with a top navigation menu linking to in-page sections: Home, Portfolio, About Us, Services, Client Results, Testimonials, Contact Us.",
+      "featureId": "feature-add-the-user-uploaded-logo-image-chatgpt-image-feb-10-2026-06-11-32-am-png-to-the-app-s-static-assets-and-create-optimized-logo-variants-for-web-use-navigation-header-and-favicon-keeping-the-logo-visually-crisp-on-light-and-dark-backgrounds",
+      "featureTitle": "Add the user-uploaded logo image (\"ChatGPT Image Feb 10, 2026, 06_11_32 AM.png\") to the app’s static assets and create optimized logo variants for web use (navigation/header and favicon), keeping the logo visually crisp on light and dark backgrounds.",
+      "files": [],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-replace-all-current-text-only-solvirostudio-branding-in-the-site-header-navigation-and-footer-with-the-new-logo-image-while-keeping-accessible-text-via-alt-attributes-and-maintaining-consistent-spacing-alignment-with-the-existing-layout",
+      "featureTitle": "Replace all current text-only “SolviroStudio” branding in the site header/navigation and footer with the new logo image, while keeping accessible text via alt attributes and maintaining consistent spacing/alignment with the existing layout.",
       "files": [
-        "frontend/src/App.tsx",
+        "frontend/src/components/BrandLogo.tsx",
+        "frontend/src/components/Footer.tsx",
         "frontend/src/components/TopNav.tsx",
-        "frontend/src/main.tsx"
+        "frontend/src/index.css"
       ],
       "components": [
         "authorization@4.0.0",
@@ -18,17 +36,15 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-1"
+        "REQ-14"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-implement-the-site-wide-visual-system-using-the-brand-colors-ffd233-ffa500-ff6a00-for-buttons-accents-and-highlights-including-a-consistent-gradient-treatment-ffd233-ffa500-ff6a00-and-a-modern-clean-professional-layout-suitable-for-a-results-focused-solar-marketing-agency",
-      "featureTitle": "Implement the site-wide visual system using the brand colors #FFD233, #FFA500, #FF6A00 for buttons, accents, and highlights, including a consistent gradient treatment (#FFD233 → #FFA500 → #FF6A00) and a modern, clean, professional layout suitable for a results-focused solar marketing agency.",
+      "featureId": "feature-update-the-html-document-head-metadata-to-use-the-new-favicon-derived-from-the-uploaded-logo",
+      "featureTitle": "Update the HTML document head metadata to use the new favicon derived from the uploaded logo.",
       "files": [
-        "frontend/index.css",
-        "frontend/src/components/GradientButton.tsx",
-        "frontend/tailwind.config.js"
+        "frontend/index.html"
       ],
       "components": [
         "authorization@4.0.0",
@@ -39,194 +55,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-2"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-create-the-home-hero-section-with-the-exact-headline-subheadline-cta-button-text-and-a-professional-gradient-background-using-ffd233-ffa500-ff6a00",
-      "featureTitle": "Create the Home (Hero) section with the exact headline, subheadline, CTA button text, and a professional gradient background using #FFD233 → #FFA500 → #FF6A00.",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/sections/HeroSection.tsx"
-      ],
-      "components": [
-        "authorization@4.0.0",
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-3"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-create-the-about-solvirostudio-section-with-the-provided-text-include-an-optional-visual-image-illustration-and-include-a-cta-button-labeled-learn-more",
-      "featureTitle": "Create the About SolviroStudio section with the provided text, include an optional visual (image/illustration), and include a CTA button labeled “Learn More”.",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/sections/AboutSection.tsx"
-      ],
-      "components": [
-        "authorization@4.0.0",
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-4"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-create-the-services-section-listing-exactly-three-services-with-1-2-sentence-descriptions-each-1-meta-ads-management-for-solar-companies-2-creative-design-visual-campaigns-3-roi-focused-lead-generation-include-a-cta-button-labeled-explore-services",
-      "featureTitle": "Create the Services section listing exactly three services with 1–2 sentence descriptions each: (1) Meta Ads Management for Solar Companies, (2) Creative Design & Visual Campaigns, (3) ROI-Focused Lead Generation; include a CTA button labeled “Explore Services”.",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/sections/ServicesSection.tsx"
-      ],
-      "components": [
-        "authorization@4.0.0",
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-5"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-create-the-portfolio-section-showcasing-5-7-projects-with-visuals-each-project-block-must-include-an-ad-design-image-a-campaign-goal-e-g-generate-solar-leads-and-results-achieved-leads-engagement-roi-metrics-include-a-cta-button-labeled-view-full-portfolio",
-      "featureTitle": "Create the Portfolio section showcasing 5–7 projects with visuals; each project block must include an Ad Design Image, a Campaign Goal (e.g., generate solar leads), and Results achieved (leads, engagement, ROI metrics); include a CTA button labeled “View Full Portfolio”.",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/sections/PortfolioSection.tsx"
-      ],
-      "components": [
-        "authorization@4.0.0",
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-6"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-create-a-client-results-section-designed-to-hold-multiple-screenshots-graphics-of-real-campaign-results-including-the-provided-intro-text-and-a-cta-button-labeled-get-your-results",
-      "featureTitle": "Create a Client Results section designed to hold multiple screenshots/graphics of real campaign results, including the provided intro text and a CTA button labeled “Get Your Results”.",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/sections/ClientResultsSection.tsx"
-      ],
-      "components": [
-        "authorization@4.0.0",
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-7"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-create-the-testimonials-section-with-3-5-client-quotes-praising-meta-ads-and-creative-design-services-for-solar-businesses-including-the-provided-supporting-text",
-      "featureTitle": "Create the Testimonials section with 3–5 client quotes praising Meta Ads and Creative Design services for solar businesses, including the provided supporting text.",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/sections/TestimonialsSection.tsx"
-      ],
-      "components": [
-        "authorization@4.0.0",
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-8"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-create-the-contact-us-section-with-the-provided-text-display-the-email-solvirostudio-gmail-com-display-a-phone-placeholder-and-provide-a-simple-contact-form-with-a-cta-button-labeled-contact-me",
-      "featureTitle": "Create the Contact Us section with the provided text, display the email “solvirostudio@gmail.com”, display a phone placeholder, and provide a simple contact form with a CTA button labeled “Contact Me”.",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/sections/ContactSection.tsx",
-        "frontend/src/hooks/useSubmitContactForm.ts"
-      ],
-      "components": [
-        "authorization@4.0.0",
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-9"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-ensure-every-major-section-hero-about-services-portfolio-client-results-testimonials-contact-contains-a-prominent-call-to-action-button-as-specified-and-those-ctas-provide-sensible-navigation-e-g-scroll-to-contact-services-portfolio-consistent-with-a-lead-generation-flow",
-      "featureTitle": "Ensure every major section (Hero, About, Services, Portfolio, Client Results, Testimonials, Contact) contains a prominent call-to-action button as specified, and those CTAs provide sensible navigation (e.g., scroll to Contact/Services/Portfolio) consistent with a lead-generation flow.",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/GradientButton.tsx",
-        "frontend/src/components/sections/AboutSection.tsx",
-        "frontend/src/components/sections/ClientResultsSection.tsx",
-        "frontend/src/components/sections/HeroSection.tsx",
-        "frontend/src/components/sections/PortfolioSection.tsx",
-        "frontend/src/components/sections/ServicesSection.tsx"
-      ],
-      "components": [
-        "authorization@4.0.0",
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-11"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-add-static-asset-support-for-the-requested-visuals-team-illustration-portfolio-ad-designs-client-results-graphics-charts-and-render-them-in-the-appropriate-sections-from-frontend-public-assets-generated-no-backend-image-routing",
-      "featureTitle": "Add static asset support for the requested visuals (team illustration, portfolio ad designs, client results graphics/charts) and render them in the appropriate sections from frontend/public/assets/generated (no backend image routing).",
-      "files": [
-        "frontend/src/components/sections/AboutSection.tsx",
-        "frontend/src/components/sections/ClientResultsSection.tsx",
-        "frontend/src/components/sections/PortfolioSection.tsx"
-      ],
-      "components": [
-        "authorization@4.0.0",
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-12"
+        "REQ-15"
       ],
       "confidence": "high"
     }

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import BrandLogo from './BrandLogo';
 
 interface TopNavProps {
   onNavigate: (sectionId: string) => void;
@@ -35,9 +36,13 @@ export default function TopNav({ onNavigate }: TopNavProps) {
     >
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <div className="text-2xl font-bold brand-gradient-text">SolviroStudio</div>
-          </div>
+          <button
+            onClick={() => onNavigate('home')}
+            className="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-brand-primary rounded-md"
+            aria-label="Go to home"
+          >
+            <BrandLogo height={36} className="logo-crisp" />
+          </button>
 
           <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => (

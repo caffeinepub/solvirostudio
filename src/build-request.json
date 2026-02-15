@@ -1,270 +1,80 @@
 {
   "kind": "build_request",
-  "title": "SolviroStudio extra-long portfolio website (Meta Ads + Creative Design for solar companies)",
+  "title": "Replace SolviroStudio logo site-wide with uploaded logo",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-1",
-      "text": "Build a single-page, extra-long scrolling portfolio website for “SolviroStudio” with a top navigation menu linking to in-page sections: Home, Portfolio, About Us, Services, Client Results, Testimonials, Contact Us.",
+      "id": "REQ-13",
+      "text": "Add the user-uploaded logo image (\"ChatGPT Image Feb 10, 2026, 06_11_32 AM.png\") to the app’s static assets and create optimized logo variants for web use (navigation/header and favicon), keeping the logo visually crisp on light and dark backgrounds.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-1"
+          "msg-user-website-version-1",
+          "msg-user-replace-logo",
+          "msg-user-upload-1"
         ],
         "quotes": [
-          "Navigation menu: Home / Portfolio / About Us / Services / Client Results / Testimonials / Contact Us",
-          "Scroll length: extra long, covering all above sections for strong client trust"
+          "replace my logo"
         ]
       },
       "acceptanceCriteria": [
-        "Top navigation is visible and includes exactly: Home, Portfolio, About Us, Services, Client Results, Testimonials, Contact Us.",
-        "Clicking a nav item scrolls to the corresponding section on the same page (anchor/scroll behavior).",
-        "Page scroll length is clearly “extra long” with all requested sections and substantial vertical spacing/content."
+        "The repository contains the original uploaded logo file stored under frontend/public/assets/generated (or a clearly documented assets folder under frontend/public) without routing through the backend.",
+        "At least two optimized variants exist in frontend/public/assets/generated: one for header/nav display and one square icon suitable for favicon/app icon usage.",
+        "The optimized logo variants have transparent background (where applicable) and look sharp when rendered at typical navbar sizes (e.g., ~28–40px tall) and at favicon sizes."
       ]
     },
     {
-      "id": "REQ-2",
-      "text": "Implement the site-wide visual system using the brand colors #FFD233, #FFA500, #FF6A00 for buttons, accents, and highlights, including a consistent gradient treatment (#FFD233 → #FFA500 → #FF6A00) and a modern, clean, professional layout suitable for a results-focused solar marketing agency.",
+      "id": "REQ-14",
+      "text": "Replace all current text-only “SolviroStudio” branding in the site header/navigation and footer with the new logo image, while keeping accessible text via alt attributes and maintaining consistent spacing/alignment with the existing layout.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-1"
+          "msg-user-replace-logo"
         ],
         "quotes": [
-          "Colors to use: #FFD233, #FFA500, #FF6A00 (for buttons, accents, and highlights)",
-          "Design Instructions:\n\nModern, clean, and professional layout\n\nHighlight buttons, icons, and accents with gradient colors (#FFD233 → #FFA500 → #FF6A00)\n\nEnsure the website feels trustworthy, problem-solving, and results-focused, especially for solar companies"
+          "replace my logo"
         ]
       },
       "acceptanceCriteria": [
-        "Primary buttons and key accents use the specified brand colors and/or the specified gradient.",
-        "The gradient (#FFD233 → #FFA500 → #FF6A00) is used consistently for highlights (e.g., CTAs, section dividers, icon fills, badges) without introducing additional competing primary brand colors.",
-        "Overall layout is modern/clean with clear hierarchy, readable typography, and trustworthy visual presentation."
+        "Top navigation (frontend/src/components/TopNav.tsx) displays the new logo image instead of the text “SolviroStudio”.",
+        "Footer (frontend/src/components/Footer.tsx) displays the new logo image instead of the text “SolviroStudio”.",
+        "All logo images include meaningful alt text (e.g., “SolviroStudio logo”) and do not cause layout shifts when scrolling (TopNav scroll state remains stable).",
+        "The logo scales responsively and remains legible on both transparent (top-of-page) and scrolled (bg-background/95) nav states."
       ]
     },
     {
-      "id": "REQ-3",
-      "text": "Create the Home (Hero) section with the exact headline, subheadline, CTA button text, and a professional gradient background using #FFD233 → #FFA500 → #FF6A00.",
+      "id": "REQ-15",
+      "text": "Update the HTML document head metadata to use the new favicon derived from the uploaded logo.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-1"
+          "msg-user-replace-logo"
         ],
         "quotes": [
-          "Homepage (Hero Section):\n\nHeadline: “SolviroStudio – Meta Ads & Creative Designs That Solve Your Solar Business Challenges”\n\nSubheadline: “We help solar companies attract leads, engage their audience, and maximize ROI with creative campaigns.”\n\nCall-to-action button: “Get Started Now”\n\nBackground: professional gradient using #FFD233 → #FFA500 → #FF6A00"
+          "replace my logo"
         ]
       },
       "acceptanceCriteria": [
-        "Hero headline matches exactly: “SolviroStudio – Meta Ads & Creative Designs That Solve Your Solar Business Challenges”.",
-        "Hero subheadline matches exactly: “We help solar companies attract leads, engage their audience, and maximize ROI with creative campaigns.”",
-        "Hero contains a primary CTA button labeled exactly “Get Started Now”.",
-        "Hero background is a gradient using #FFD233 → #FFA500 → #FF6A00."
-      ]
-    },
-    {
-      "id": "REQ-4",
-      "text": "Create the About SolviroStudio section with the provided text, include an optional visual (image/illustration), and include a CTA button labeled “Learn More”.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-1"
-        ],
-        "quotes": [
-          "About SolviroStudio Section:\n\nText: “At SolviroStudio, we specialize in Meta Ads and Creative Design to help solar companies overcome marketing challenges and achieve measurable growth.”\n\nInclude optional image or team illustration\n\nCall-to-action button: “Learn More”"
-        ]
-      },
-      "acceptanceCriteria": [
-        "About section contains the exact provided paragraph.",
-        "About section includes a visual area rendering the provided/generated team illustration asset (or a placeholder if assets are not yet present).",
-        "About section includes a CTA button labeled exactly “Learn More”."
-      ]
-    },
-    {
-      "id": "REQ-5",
-      "text": "Create the Services section listing exactly three services with 1–2 sentence descriptions each: (1) Meta Ads Management for Solar Companies, (2) Creative Design & Visual Campaigns, (3) ROI-Focused Lead Generation; include a CTA button labeled “Explore Services”.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-1"
-        ],
-        "quotes": [
-          "Services Section:\n\nMeta Ads Management for Solar Companies\n\nCreative Design & Visual Campaigns\n\nROI-Focused Lead Generation\n\nEach service has 1–2 sentence description\n\nCall-to-action button: “Explore Services”"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Services section displays the three service titles exactly as specified.",
-        "Each service includes a 1–2 sentence description in English focused on solar-company outcomes (leads/engagement/ROI).",
-        "Services section includes a CTA button labeled exactly “Explore Services”."
-      ]
-    },
-    {
-      "id": "REQ-6",
-      "text": "Create the Portfolio section showcasing 5–7 projects with visuals; each project block must include an Ad Design Image, a Campaign Goal (e.g., generate solar leads), and Results achieved (leads, engagement, ROI metrics); include a CTA button labeled “View Full Portfolio”.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-1"
-        ],
-        "quotes": [
-          "Portfolio Section:\n\nShowcase 5–7 projects with visuals\n\nEach project block includes:\n\nAd Design Image\n\nCampaign Goal (example: generate solar leads)\n\nResults achieved (leads, engagement, ROI metrics)\n\nCall-to-action button: “View Full Portfolio”"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Portfolio section renders between 5 and 7 project cards/blocks.",
-        "Each project card includes: (1) an image, (2) campaign goal text, (3) a results/metrics area including leads and at least one of engagement/ROI.",
-        "Portfolio section includes a CTA button labeled exactly “View Full Portfolio”."
-      ]
-    },
-    {
-      "id": "REQ-7",
-      "text": "Create a Client Results section designed to hold multiple screenshots/graphics of real campaign results, including the provided intro text and a CTA button labeled “Get Your Results”.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-1"
-        ],
-        "quotes": [
-          "Client Results Section:\n\nDedicated section for screenshots or graphics showing real campaign results\n\nText: “We deliver measurable results for solar companies. Here’s what our clients achieved with SolviroStudio:”\n\nInclude space for multiple result images or charts\n\nCall-to-action button: “Get Your Results”"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Client Results section includes the exact provided text.",
-        "Client Results section includes a responsive layout area that can display multiple images/charts (e.g., a grid/carousel).",
-        "Client Results section includes a CTA button labeled exactly “Get Your Results”."
-      ]
-    },
-    {
-      "id": "REQ-8",
-      "text": "Create the Testimonials section with 3–5 client quotes praising Meta Ads and Creative Design services for solar businesses, including the provided supporting text.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-1"
-        ],
-        "quotes": [
-          "Testimonials Section:\n\nInclude 3–5 client quotes praising Meta Ads and Creative Design services for solar businesses\n\nText: “Our clients love the results we deliver – from creative campaigns to lead generation.”"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Testimonials section includes between 3 and 5 testimonial quote blocks.",
-        "Testimonials section includes the exact provided text: “Our clients love the results we deliver – from creative campaigns to lead generation.”",
-        "Testimonials content is in English and clearly relevant to solar-company Meta Ads + creative outcomes."
-      ]
-    },
-    {
-      "id": "REQ-9",
-      "text": "Create the Contact Us section with the provided text, display the email “solvirostudio@gmail.com”, display a phone placeholder, and provide a simple contact form with a CTA button labeled “Contact Me”.",
-      "target": "both",
-      "source": {
-        "messageIds": [
-          "msg-1"
-        ],
-        "quotes": [
-          "Contact Us Section:\n\nText: “Ready to solve your solar business marketing challenges and see measurable results? Contact SolviroStudio today!”\n\nInclude:\n\nEmail: solvirostudio@gmail.com\n\nPhone placeholder\n\nSimple contact form\n\nCall-to-action button: “Contact Me”"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Contact section includes the exact provided paragraph.",
-        "Email address is displayed exactly as: solvirostudio@gmail.com.",
-        "A phone placeholder is displayed (no real number required).",
-        "A simple contact form is present (e.g., name, email, company, message) with a submit button labeled exactly “Contact Me”.",
-        "On submit, the UI shows a clear success/failure state without requiring any third-party email service."
-      ]
-    },
-    {
-      "id": "REQ-10",
-      "text": "Implement backend support to store contact form submissions in the Motoko canister (single-actor), including a query method to list submissions for administrative review (no public UI required unless minimal view is necessary).",
-      "target": "backend",
-      "source": {
-        "messageIds": [
-          "msg-1"
-        ],
-        "quotes": [
-          "Simple contact form"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Contact submissions are persisted in canister state (survive page reloads and subsequent queries).",
-        "Backend exposes an update method to create a submission and a query method to retrieve submissions.",
-        "No external databases or third-party integrations are required for submission storage."
-      ]
-    },
-    {
-      "id": "REQ-11",
-      "text": "Ensure every major section (Hero, About, Services, Portfolio, Client Results, Testimonials, Contact) contains a prominent call-to-action button as specified, and those CTAs provide sensible navigation (e.g., scroll to Contact/Services/Portfolio) consistent with a lead-generation flow.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-1"
-        ],
-        "quotes": [
-          "Buttons should appear on every major section for easy navigation"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Each major section includes a visible CTA button (matching the specified label where provided).",
-        "Clicking each CTA performs a meaningful action (e.g., scrolls to another section such as Contact, Services, or Portfolio).",
-        "CTA styling is consistent across sections and uses the brand gradient/accent colors."
-      ]
-    },
-    {
-      "id": "REQ-12",
-      "text": "Add static asset support for the requested visuals (team illustration, portfolio ad designs, client results graphics/charts) and render them in the appropriate sections from frontend/public/assets/generated (no backend image routing).",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-1"
-        ],
-        "quotes": [
-          "Include optional image or team illustration",
-          "Showcase 5–7 projects with visuals",
-          "Dedicated section for screenshots or graphics showing real campaign results"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Generated images are stored under frontend/public/assets/generated and referenced directly by the frontend.",
-        "About section renders the team illustration asset.",
-        "Portfolio project cards render the ad design images.",
-        "Client Results section renders multiple result graphics/charts assets."
+        "frontend/index.html references a favicon file derived from the uploaded logo (e.g., /assets/generated/solvirostudio-favicon...).",
+        "The favicon loads correctly in the browser tab when running the app."
       ]
     }
   ],
   "constraints": [
-    "Use English for all user-facing text.",
-    "Use only the brand colors #FFD233, #FFA500, #FF6A00 for buttons, accents, and highlights, and use the gradient #FFD233 → #FFA500 → #FF6A00 prominently.",
-    "Do not edit files under frontend/immutablePaths (compose existing UI components instead).",
-    "Backend must remain a single Motoko actor (no additional backend services).",
-    "Do not use third-party email/SMS services; contact form handling must work without external integrations."
+    "Frontend immutable paths must not be edited: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui.",
+    "Do not route images through the backend; serve logo assets as static files from the frontend (consistent with existing static asset handling).",
+    "Backend architecture must remain single-actor; no backend changes are required for this request."
   ],
   "nonGoals": [
-    "Building multi-page routing with separate URLs for each nav item (single-page scrolling is sufficient).",
-    "Integrating third-party analytics, Meta Ads APIs, CRMs, or email delivery providers.",
-    "Real-time chat, push notifications, or WebSocket-based features."
+    "Changing brand colors (#FFD233, #FFA500, #FF6A00) or the global visual system.",
+    "Redesigning the site layout beyond necessary adjustments to fit the new logo in the header/footer.",
+    "Adding new pages, sections, or backend features."
   ],
   "imageRequirements": {
     "required": [
-      "Team illustration of a professional creative/ads studio vibe with subtle solar/renewable energy motifs (team-illustration.dim_1200x800.png)",
-      "Set of 7 ad design mock images with clean modern layouts and solar-industry themes (portfolio-ad-1.dim_1200x900.png)",
-      "Set of 7 ad design mock images with clean modern layouts and solar-industry themes (portfolio-ad-2.dim_1200x900.png)",
-      "Set of 7 ad design mock images with clean modern layouts and solar-industry themes (portfolio-ad-3.dim_1200x900.png)",
-      "Set of 7 ad design mock images with clean modern layouts and solar-industry themes (portfolio-ad-4.dim_1200x900.png)",
-      "Set of 7 ad design mock images with clean modern layouts and solar-industry themes (portfolio-ad-5.dim_1200x900.png)",
-      "Set of 7 ad design mock images with clean modern layouts and solar-industry themes (portfolio-ad-6.dim_1200x900.png)",
-      "Set of 7 ad design mock images with clean modern layouts and solar-industry themes (portfolio-ad-7.dim_1200x900.png)",
-      "Set of 4 clean campaign results graphics/charts with solar marketing metrics styling (results-graphic-1.dim_1400x900.png)",
-      "Set of 4 clean campaign results graphics/charts with solar marketing metrics styling (results-graphic-2.dim_1400x900.png)",
-      "Set of 4 clean campaign results graphics/charts with solar marketing metrics styling (results-graphic-3.dim_1400x900.png)",
-      "Set of 4 clean campaign results graphics/charts with solar marketing metrics styling (results-graphic-4.dim_1400x900.png)"
+      "Transparent-background header logo derived from the uploaded logo (solvirostudio-logo-header.dim_800x240.png)",
+      "Square icon derived from the uploaded logo for favicon/app icon usage (solvirostudio-favicon.dim_256x256.png)"
     ],
     "edits": []
-  },
-  "userProfileUpdate": {
-    "goalsToAdd": [],
-    "goalsToRemove": [],
-    "preferencesToAdd": [],
-    "preferencesToRemove": [],
-    "miscToAdd": [],
-    "miscToRemove": [],
-    "fieldsToSet": {},
-    "fieldsToDelete": []
   }
 }

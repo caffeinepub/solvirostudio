@@ -1,17 +1,18 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 3,
+  "projectStateVersion": 5,
   "summary": "Build an extra-long, modern, visually engaging portfolio website for SolviroStudio focused on Meta Ads and Creative Design for solar companies, with specified navigation, branded gradient color scheme, multiple proof/results sections, portfolio showcases, testimonials, and a contact form to drive leads and trust.",
   "architectural_notes": [
     "Site should be modern/clean/professional, results-focused for solar companies, with prominent CTAs on every major section.",
     "Use brand accent/CTA gradients and highlights with #FFD233, #FFA500, #FF6A00 including hero background gradient (#FFD233→#FFA500→#FF6A00).",
     "Portfolio section should support 5–7 project entries each with an image, campaign goal, and measurable results (leads/engagement/ROI).",
     "Client Results section should support multiple screenshots/graphics/charts placeholders for proof and metrics.",
-    "Contact section includes email (solvirostudio@gmail.com), phone placeholder, and simple contact form."
+    "Contact section includes email (solvirostudio@gmail.com), phone placeholder, and simple contact form.",
+    "Logo should be configurable/swappable via a static asset (e.g., in frontend/public assets) and updated consistently anywhere it appears (header/nav, footer, favicon if used)."
   ],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Team illustration of a professional creative/ads studio vibe with subtle solar/renewable energy motifs (team-illustration.dim_1200x800.png)\n- Set of 7 ad design mock images with clean modern layouts and solar-industry themes (portfolio-ad-1.dim_1200x900.png)\n- Set of 7 ad design mock images with clean modern layouts and solar-industry themes (portfolio-ad-2.dim_1200x900.png)\n- Set of 7 ad design mock images with clean modern layouts and solar-industry themes (portfolio-ad-3.dim_1200x900.png)\n- Set of 7 ad design mock images with clean modern layouts and solar-industry themes (portfolio-ad-4.dim_1200x900.png)\n- Set of 7 ad design mock images with clean modern layouts and solar-industry themes (portfolio-ad-5.dim_1200x900.png)\n- Set of 7 ad design mock images with clean modern layouts and solar-industry themes (portfolio-ad-6.dim_1200x900.png)\n- Set of 7 ad design mock images with clean modern layouts and solar-industry themes (portfolio-ad-7.dim_1200x900.png)\n- Set of 4 clean campaign results graphics/charts with solar marketing metrics styling (results-graphic-1.dim_1400x900.png)\n- Set of 4 clean campaign results graphics/charts with solar marketing metrics styling (results-graphic-2.dim_1400x900.png)\n- Set of 4 clean campaign results graphics/charts with solar marketing metrics styling (results-graphic-3.dim_1400x900.png)\n- Set of 4 clean campaign results graphics/charts with solar marketing metrics styling (results-graphic-4.dim_1400x900.png)",
+  "imageRequirements": "## Required Images\n- Transparent-background header logo derived from the uploaded logo (solvirostudio-logo-header.dim_800x240.png)\n- Square icon derived from the uploaded logo for favicon/app icon usage (solvirostudio-favicon.dim_256x256.png)",
   "existing_features": [
     {
       "id": "feature-build-a-single-page-extra-long-scrolling-portfolio-website-for-solvirostudio-with-a-top-navigation-menu-linking-to-in-page-sections-home-portfolio-about-us-services-client-results-testimonials-contact-us",
@@ -100,6 +101,30 @@
         "REQ-12"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-add-the-user-uploaded-logo-image-chatgpt-image-feb-10-2026-06-11-32-am-png-to-the-app-s-static-assets-and-create-optimized-logo-variants-for-web-use-navigation-header-and-favicon-keeping-the-logo-visually-crisp-on-light-and-dark-backgrounds",
+      "title": "Add the user-uploaded logo image (\"ChatGPT Image Feb 10, 2026, 06_11_32 AM.png\") to the app’s static assets and create optimized logo variants for web use (navigation/header and favicon), keeping the logo visually crisp on light and dark backgrounds.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-all-current-text-only-solvirostudio-branding-in-the-site-header-navigation-and-footer-with-the-new-logo-image-while-keeping-accessible-text-via-alt-attributes-and-maintaining-consistent-spacing-alignment-with-the-existing-layout",
+      "title": "Replace all current text-only “SolviroStudio” branding in the site header/navigation and footer with the new logo image, while keeping accessible text via alt attributes and maintaining consistent spacing/alignment with the existing layout.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-html-document-head-metadata-to-use-the-new-favicon-derived-from-the-uploaded-logo",
+      "title": "Update the HTML document head metadata to use the new favicon derived from the uploaded logo.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -115,6 +140,12 @@
       "reqIds": [
         "REQ-10"
       ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Replace/update the SolviroStudio logo used on the website (e.g., header/nav and any other logo placements) with the user-provided logo asset.",
+      "reqIds": [],
       "status": "pending"
     }
   ],

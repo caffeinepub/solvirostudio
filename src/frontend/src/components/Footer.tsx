@@ -1,4 +1,5 @@
 import { Heart } from 'lucide-react';
+import BrandLogo from './BrandLogo';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -12,7 +13,9 @@ export default function Footer() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <h3 className="text-xl font-bold brand-gradient-text mb-4">SolviroStudio</h3>
+              <div className="mb-4">
+                <BrandLogo height={40} className="logo-crisp" />
+              </div>
               <p className="text-muted-foreground">
                 Meta Ads & Creative Design specialists for solar companies.
               </p>
